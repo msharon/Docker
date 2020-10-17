@@ -1,0 +1,18 @@
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+path.data: /data/data
+path.logs: /data/log
+
+# minimum_master_nodes need to be explicitly set when bound on a public IP
+# set to 1 to allow single node clusters
+# Details: https://github.com/elastic/elasticsearch/pull/17288
+discovery.zen.minimum_master_nodes: 1
+#couchbase.password: "Administrator"
+#couchbase.username: "Administrator"
+#couchbase.maxConcurrentRequests: 1024
+#couchbase.typeSelector: org.elasticsearch.transport.couchbase.capi.DefaultTypeSelector
+#couchbase.typeSelector.defaultDocumentType: offering
+#couchbase.ignoreFailures: true
+#couchbase.keyFilter: org.elasticsearch.transport.couchbase.capi.RegexKeyFilter
+#couchbase.keyFilter.type: exclude
+#couchbase.keyFilter.keyFiltersRegex.exclude: ^exclude:.*$
