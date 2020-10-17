@@ -1,6 +1,6 @@
 FROM @fromImage@
 
-#USER wcsuser
+#USER esuser
 
 # Source: https://github.com/pires/docker-elasticsearch/blob/master/Dockerfile
 # Export HTTP & Transport
@@ -14,9 +14,6 @@ ARG imageVersion=${image.version}
 ARG yumRepoName=rhel-7-server-rpms
 ARG imageTarName=${imageName}-${imageVersion}.tar
 ARG registry=https://registry.dockerhub.io
-ARG transportPluginName=elasticsearch-transport-couchbase
-ARG transportPluginVersion=3.0.0-cypress-es${imageVersion}
-ARG transportPluginFullName=${transportPluginName}-${transportPluginVersion}.zip
 ARG yumRepoDir=/etc/yum.repos.d/
 
 
